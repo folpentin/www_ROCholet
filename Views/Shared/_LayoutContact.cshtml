@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCholet</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="verticalMenu">
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Club")'" value="LE CLUB >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Equipes")'" value="NOS ÉQUIPES >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "EcoleR")'" value="ÉCOLE DE RUGBY >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Pedagogique")'" value="PÉDAGOGIQUE >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Abergavenny")'" value="ABERGAVENNY >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Partenaire")'" value="NOS PARTENAIRES >" />
+        <input type="button" class="titleMenu" onclick="location.href='@Url.Action("Index", "Contact")'" value="CONTACT >" />
+    </div>
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top" style="justify-content: initial;">
+        <div class="col-xs-4">
+            <img id="openMenu" src="~/Content/img/hMenuWhite.svg" style="cursor:pointer; z-index: 100001;margin-left:0px;" />
+
+            <img id="logoRoc" src="~/Content/img/logoEquipe/ROC_logo.gif" alt="logo ROC" style="cursor:pointer; height:45px; width:auto; margin-left:30px" />
+        </div>
+        <div class="col-xs-6">
+            <h1 style="color:white">Contact</h1>
+        </div>
+        <div class="col-xs-2" style="text-align:right">
+            <input class="btnShop" type="button" value="LE SHOP !" onclick="location.href='@Url.Action("Index", "Boutique")'" />
+        </div>
+    </div>
+
+
+
+    @*@Html.ActionLink("Ajouyer une nouvelle équipe", "PV_AddEquipe", "Manage")*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Rugby Olympique Choletais</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<script>
+    $(document).mouseup(function (e) {
+        var container = $(".verticalMenu");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+            $("#logoRoc").css("margin-left", "30px");
+        }
+    });
+    $("#openMenu").click(function () {
+        $(".verticalMenu").toggle("slide");
+        $("#logoRoc").animate({marginLeft: "270px"}, 500);
+    });
+
+</script>

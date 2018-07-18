@@ -77,6 +77,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -196,20 +198,61 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AubergavennyController.cs" />
+    <Compile Include="Controllers\BoutiqueController.cs" />
+    <Compile Include="Controllers\ClubController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\EcoleRugbyController.cs" />
+    <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PartenaireController.cs" />
+    <Compile Include="Controllers\PedagogiqueController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AgendaModels.cs" />
+    <Compile Include="Models\BoutiqueModels\CategorieAchatModels.cs" />
+    <Compile Include="Models\BoutiqueModels\CommandeModels.cs" />
+    <Compile Include="Models\BoutiqueModels\PanierModels.cs" />
+    <Compile Include="Models\BoutiqueModels\DispoProduitModels.cs" />
+    <Compile Include="Models\BoutiqueModels\ProduitModels.cs" />
+    <Compile Include="Models\BoutiqueModels\TailleProduitModels.cs" />
+    <Compile Include="Models\ClubModels.cs" />
+    <Compile Include="Models\EquipeModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CategorieAchatRepository.cs" />
+    <Compile Include="Repositories\CommandeRepository.cs" />
+    <Compile Include="Repositories\DispoProduitRepository.cs" />
+    <Compile Include="Repositories\PanierRepository.cs" />
+    <Compile Include="Repositories\ProduitRepository.cs" />
+    <Compile Include="Repositories\TailleProduitRepository.cs" />
+    <Compile Include="Services\IBoutiqueService.cs" />
+    <Compile Include="Services\Implementation\BoutiqueService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\hMenuBlack.svg" />
+    <Content Include="Content\img\hMenuWhite.svg" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-black.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-bleuFonce.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-cyan.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-grey.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-rouge.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-turqoise.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-vert.png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-violet..png" />
+    <Content Include="Content\img\pictoBallonR\icons8-rugby-yellow.png" />
+    <Content Include="Content\img\logoEquipe\ROC_logo.gif" />
+    <Content Include="Content\img\logoEquipe\sco_400x400.png" />
+    <Content Include="Content\img\menu.svg" />
+    <Content Include="Content\img\right-arrow-circular-button.svg" />
+    <Content Include="Content\img\ROC_favicon.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -233,7 +276,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -267,9 +312,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Manage\PV_AddEquipe.cshtml" />
+    <Content Include="Views\Boutique\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutBoutique.cshtml" />
+    <Content Include="Views\Club\Index.cshtml" />
+    <Content Include="Views\Aubergavenny\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\EcoleRugby\Index.cshtml" />
+    <Content Include="Views\Partenaire\Index.cshtml" />
+    <Content Include="Views\Pedagogique\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutAubergavenny.cshtml" />
+    <Content Include="Views\Shared\_LayoutClub.cshtml" />
+    <Content Include="Views\Shared\_LayoutContact.cshtml" />
+    <Content Include="Views\Shared\_LayoutEcoleRugby.cshtml" />
+    <Content Include="Views\Shared\_LayoutPartenaire.cshtml" />
+    <Content Include="Views\Shared\_LayoutPedagogique.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="MySQL\" />
+    <Folder Include="Services\Entities\Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

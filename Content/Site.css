@@ -1,6 +1,8 @@
-﻿body {
+﻿
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +23,87 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.verticalMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 90px 35px 35px 55px;
+    z-index: 100000;
+    height: 100%;
+    width:300px;
+    background-color: #222222;
+    padding-top:180px;
+}
+.titleMenu{
+    color: white;
+    font-size:20px; 
+    background-color: #222222;
+    border: none;
+}
+.prochainMatch{
+    height:300px;
+    background: #222222;
+    padding-top:50px;
+    color:white;
+}
+.infosClub{
+    text-align:center;
+    height:200px;
+}
+.logoCLub{
+    height:100px; 
+    width:auto; 
+}
+.nomClub{
+    font-size:18px;
+    bottom:0; 
+    position:absolute;
+    left: 0;
+    right: 0;
+}
+.infosMatch{
+    text-align:center;
+    margin-top:50px;
+}
+.logoCLub2{
+    margin-top:10px;
+    height:30px;
+    width:auto;
+}
+.infosMatch2{
+    font-size:11px;
+    margin-bottom:0px;
+}
+.prochainMatchMini{
+    display: none;
+    color:white;
+}
+.btnShop{
+    border: none;
+    color:white;
+    font-size: 20px;
+    background-color: #222222;
+}
+
+.sideNav {
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 400px;
+    right: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border-radius:15px;
+}
+
+.sideNav img{
+    width: 70px;
+    height: auto;
+}
+
+.sideNav a:hover {
+    color: #064579;
 }

@@ -1,3 +1,33 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string cLayout = "";
+
+    switch (controller)
+    {
+        case "Aubergavenny":
+            cLayout = "~/Views/Shared/_LayoutAubergavenny.cshtml";
+            break;
+        case "Boutique":
+            cLayout = "~/Views/Shared/_LayoutBoutique.cshtml";
+            break;
+        case "Club":
+            cLayout = "~/Views/Shared/_LayoutClub.cshtml";
+            break;
+        case "Contact":
+            cLayout = "~/Views/Shared/_LayoutContact.cshtml";
+            break;
+        case "EcoleRugby":
+            cLayout = "~/Views/Shared/_LayoutEcoleRugby.cshtml";
+            break;
+        case "Partenaire":
+            cLayout = "~/Views/Shared/_LayoutPartenaire.cshtml";
+            break;
+        case "Pedagogique":
+            cLayout = "~/Views/Shared/_LayoutPedagogique.cshtml";
+            break;
+        default:
+            cLayout = "~/Views/Shared/_Layout.cshtml";
+            break;
+    }
+    Layout = cLayout;
 }

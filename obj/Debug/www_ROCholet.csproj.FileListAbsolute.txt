@@ -99,3 +99,5 @@ c:\users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_R
 c:\users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_ROCholet\obj\Debug\www_ROCholet.csprojResolveAssemblyReference.cache
 c:\users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_ROCholet\obj\Debug\www_ROCholet.dll
 c:\users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_ROCholet\obj\Debug\www_ROCholet.pdb
+C:\Users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_ROCholet\bin\MySql.Data.xml
+C:\Users\merle\onedrive\documents\visual studio 2015\Projects\www_ROCholet\www_ROCholet\bin\MySql.Web.xml

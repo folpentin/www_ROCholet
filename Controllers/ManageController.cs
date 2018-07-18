@@ -101,7 +101,7 @@ namespace www_ROCholet.Controllers
 
         //
         // GET: /Manage/AddPhoneNumber
-        public ActionResult AddPhoneNumber()
+        public ActionResult PV_AddEquipe()
         {
             return View();
         }
