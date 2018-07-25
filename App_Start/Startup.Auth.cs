@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using www_ROCholet.Models;
+using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace www_ROCholet
 {
@@ -63,6 +65,20 @@ namespace www_ROCholet
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDbContextConnectionString"].ConnectionString;
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                if (con.State == System.Data.ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                else
+                {
+
+                }
+
+            };
         }
     }
 }
